@@ -12,3 +12,9 @@ rest api 와 다른 graphql 을 공부해보기 위함.
 -> 결국 크게 Query와 Mutation으로 나뉘는데, 
 Query는 데이터베이스에서 데이터를 읽는 요청을 하고,
 Mutation은 데이터베이스에서 데이터를 수정하는 요청을 한다. 
+
+
+graphql api는 엔드포인트가 아니라, 타입과 필드로 구성된다.
+user{
+  name
+}
