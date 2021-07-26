@@ -15,6 +15,27 @@ const resolvers = {
             }
             Users.push(newUser);
             return newUser;
+        },
+        
+        addUser2 : (_, {input}) => {
+            if (Users.find(user => user.name === input.name)) return null
+            const user = {
+                input
+            }
+            console.log(user)
+            Users.push(user.input);
+            console.log(Users)
+            return user.input;
+        },
+        addStudent : (_, {id, name, age, grade}) => {
+            const newStudent = {
+                id : id,
+                name : name,
+                age : age,
+                grade : grade
+            }
+
+            return newStudent
         }
     }
 }
