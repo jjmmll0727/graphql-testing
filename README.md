@@ -18,3 +18,5 @@ graphql api는 엔드포인트가 아니라, 타입과 필드로 구성된다.
 user{
   name
 }
+
+정리해놓은 블로그 <https://jjmmll0727.github.io/research/graphql/>
