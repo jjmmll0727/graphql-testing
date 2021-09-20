@@ -40,8 +40,14 @@ input newUser {
     age : Int
 }
 
+type books {
+    title : String!,
+    content : String!,
+    author : String!
+}
+
 type Query {
-    showUser : [Users!]!
+    showUser : [books!]!
 }
 
 type Mutation {

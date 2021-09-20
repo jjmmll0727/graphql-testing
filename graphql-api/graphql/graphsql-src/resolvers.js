@@ -1,8 +1,18 @@
 import Users from '../database/user.js'
+import bookConfig from '../../config/aws/Books.js'
+import AWS from "aws-sdk";
 
 const resolvers = {
     Query : {
-        showUser : () => Users
+        showUser : async() => {
+            AWS.config.update(bookConfig.aws_iam_info);
+            const docClient = new AWS.DynamoDB.DocumentClient();
+            const params = {
+                TableName : bookConfig.aws_table_name
+            }
+            const result = await docClient.scan(params).promise()
+            return result
+        }
     },
 
     Mutation : {

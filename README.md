@@ -37,6 +37,4 @@ server.listen().then(({ url }) => {
 ```
 위 코드를 실행하게 되는데, apollo server 를 실행하면 자동적으로 port 4000 번으로 서버가 열린다. 
 
-<src img = "/img/apollo.pmg"> 
-위와 같은 화면이 나오며 api를 쿼리형식으로 테스트 할 수 있게 된다. 
 
