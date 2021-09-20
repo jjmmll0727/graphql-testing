@@ -14,9 +14,28 @@ Query는 데이터베이스에서 데이터를 읽는 요청을 하고,
 Mutation은 데이터베이스에서 데이터를 수정하는 요청을 한다. 
 
 
-graphql api는 엔드포인트가 아니라, 타입과 필드로 구성된다.
-user{
-  name
-}
+### test
 
-정리해놓은 블로그 <https://jjmmll0727.github.io/research/graphql/>
+`npm start`
+
+```js
+import { ApolloServer } from 'apollo-server';
+import resolvers from './graphsql-src/resolvers.js'
+import typeDefs from './graphsql-src/typeDefs.js';
+
+// ApolloServer는 스키마와 리졸버가 반드시 필요함
+const server = new ApolloServer({
+  typeDefs,
+  resolvers
+});c
+
+// listen 함수로 웹 서버 실행
+server.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
+```
+위 코드를 실행하게 되는데, apollo server 를 실행하면 자동적으로 port 4000 번으로 서버가 열린다. 
+
+<src img = "/img/apollo.pmg"> 
+위와 같은 화면이 나오며 api를 쿼리형식으로 테스트 할 수 있게 된다. 
+
