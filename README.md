@@ -13,6 +13,7 @@ rest api 와 다른 graphql 을 공부해보기 위함.
 Query는 데이터베이스에서 데이터를 읽는 요청을 하고,
 Mutation은 데이터베이스에서 데이터를 수정하는 요청을 한다. 
 
+더 자세한 정리 <https://velog.io/@jaymee/graphql>
 
 ### test
 
